@@ -63,14 +63,44 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 ```
 <!-- keep the format -->
 >[!TIP]
->Delete all installed crates
+>Creates force update / delete / re-installed all crates
 <!-- To comply with the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
-cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo uninstall " >/tmp/uninstall.txt
-cargo install --list  |cut -d " " -f1 | grep -v "^$" |xargs -n 1 echo "cargo uninstall "
+# show was is already installed
 cargo install --list
+# create script for uninstall 
+cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo uninstall " >/tmp/rust_uninstall_creates.sh
+# create script for re-install 
+cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo install " >/tmp/rust_install_creates.sh
+# create script for re-install with sccache
+cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "time RUSTC_WRAPPER=sccache cargo install " >/tmp/rust_install_w_sccache_creates.sh
+# make executable
+chmod +x /tmp/rust_uninstall._creates.sh 
+# run the script for uninstalled
+/tmp/rust_uninstall._creates.sh
+# second method for generate script
+# cargo install --list  |cut -d " " -f1 | grep -v "^$" |xargs -n 1 echo "cargo uninstall "
+# Show which creates are installed now
+cargo install --list
+# re-install - preselect in generated file avoid for new install
+# make executable
+chmod +x /tmp/rust_install_creates.sh
+# run the script for installed
+/tmp/rust_install_creates.sh
+
 ```
 <!-- To comply with the format -->
+cargo install --help
+Install a Rust binary
+
+Usage: cargo install [OPTIONS] [CRATE[@<VER>]]...
+
+--list                     List all installed packages and their versions
+##########
+cargo add --help
+Add dependencies to a Cargo.toml manifest file
+
+
 <!-- keep the format -->
 >[!NOTE]
 >Symbol to mark web external links [![alt text][1]](./README.md)

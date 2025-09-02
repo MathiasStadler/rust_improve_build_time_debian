@@ -6,6 +6,7 @@
         "postcompilation",
         "RUSTC",
         "rustup",
-        "sccache"
+        "sccache",
+        "serde"
     ]
 }
