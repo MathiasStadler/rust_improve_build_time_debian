@@ -12,15 +12,13 @@
 <!-- keep the format -->
 ## For more info follow the project path [![alt text][1]](./project_path.md)
 <!-- keep the format -->
-> [!NOTE]
-> Complete list of github markdown emoji markup [![alt text][1]](https://gist.github.com/rxaviers/7360908)
+>[!NOTE]
+>Complete list of github markdown emoji markup [![alt text][1]](https://gist.github.com/rxaviers/7360908)
 <!-- keep the format -->
 ## Garbage garage - Should have no place here :sunglasses: :relaxed: :grin:
 <!-- keep the format -->
 >[!NOTE]
 >Symbol to mark web external links [![alt text][1]](./README.md)
-<!-- keep the format -->
-> [!NOTE]
 <!-- cspell:disable-next-line -->
 >[!NOTE]
 <!-- cspell:disable-next-line -->
@@ -28,32 +26,32 @@
 <!-- keep the format -->
 ## Useful Marker - Correct view on github [![alt text][1]](https://github.com/MathiasStadler/rust_improve_build_time_debian)
 <!-- keep the format -->
-- [Markdown] An option to highlight a "Note" and "Warning" using blockquote (Beta) [![alt text][1]](https://github.com/orgs/community/discussions/16925)
+-[Markdown] An option to highlight a "Note" and "Warning" using blockquote (Beta) [![alt text][1]](https://github.com/orgs/community/discussions/16925)
 <!-- -->
-> [!NOTE]  
+>[!NOTE]  
 > Highlights information that users should take into account, even when skimming.
 <!-- keep the format -->
-> [!NOTE] - Follow the instructions from the website
+>[!NOTE] - Follow the instructions from the website
 <!-- keep the format -->
-> [!TIP]
+>[!TIP]
 > Optional information to help a user be more successful.
 <!-- keep the format -->
-> [!IMPORTANT]  
+>[!IMPORTANT]  
 > Crucial information necessary for users to succeed.
 <!-- keep the format -->
-> [!WARNING]  
+>[!WARNING]  
 > Critical content demanding immediate user attention due to potential risks.
 <!-- keep the format -->
-> [!CAUTION]
+>[!CAUTION]
 > Negative potential consequences of an action.
 <!-- keep the format -->
-> "✅" [![alt text][1]](https://www.symbolcopy.com/check-mark-symbol.html)
+>"✅" [![alt text][1]](https://www.symbolcopy.com/check-mark-symbol.html)
 <!-- keep the format -->
-> "❌" [![alt text][1]](https://www.symbolcopy.com/check-mark-symbol.html)
+>"❌" [![alt text][1]](https://www.symbolcopy.com/check-mark-symbol.html)
 <!-- keep the format -->
-> "☑" [![alt text][1]](https://www.symbolcopy.com/check-mark-symbol.html)
+>"☑" [![alt text][1]](https://www.symbolcopy.com/check-mark-symbol.html)
 <!-- keep the format -->
-> "☐" [![alt text][1]](https://www.symbolcopy.com/check-mark-symbol.html)
+>"☐" [![alt text][1]](https://www.symbolcopy.com/check-mark-symbol.html)
 
 <!-- make folder and download the link sign vai curl -->
 <!-- mkdir -p img && curl --create-dirs --output-dir img -O  "https://raw.githubusercontent.com/MathiasStadler/link_symbol_svg/refs/heads/main/link_symbol.svg"-->
