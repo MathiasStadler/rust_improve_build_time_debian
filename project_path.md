@@ -23,11 +23,26 @@ touch README.md \
 && rustup  check \
 && rustup toolchain uninstall stable \
 && rustup toolchain install stable \
+&& rustup override set stable \
 && rustup update  --force \
 && rustup show \
-&& mkdir tests
+&& mkdir tests \
+
+```
+
+## Install cargo cache [![alt text][1]](https://crates.io/crates/cargo-cache)
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+cargo install cargo-cache
 ```
 <!-- keep the format -->
+## Show cargo cache
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+cargo cache
+```
+time RUSTC_WRAPPER=sccache cargo build
+
 <!-- keep the format -->
 ## Show which toolchain is active
 <!-- keep the format -->
@@ -35,6 +50,15 @@ touch README.md \
 rustup show
 # or better
 rustup show |sed -n '/active toolchain/,/^$/p'
+```
+<!-- keep the format -->
+## Switch between Rust toolchains  [![alt text][1]](https://stackoverflow.com/questions/58226545/how-to-switch-between-rust-toolchains)
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+rustup override set nightly
+rustup override set stable
+# another toolchain
+rustup override set 1.85.0-x86_64-unknown-linux-gnu
 ```
 <!-- keep the format -->
 >[!TIP]
