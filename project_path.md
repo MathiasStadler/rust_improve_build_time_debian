@@ -160,7 +160,7 @@ ls -la ~/.cargo/bin
 >**cargo remove serde**
 >
 >Generate script for remove all installed crates from project
->"❌" Shebang, return code. set -e. MISSING
+>"❌" Pls Add -> Shebang, return code. set -e. MISSING
 >**cargo tree --depth 1|sed -n '1!p' |awk '{print $2}'|xargs -n 1 echo "cargo remove " >/tmp/rust_remove_dependencies.sh**
 >
 >Generate script for install crates to project
