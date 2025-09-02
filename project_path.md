@@ -90,16 +90,52 @@ chmod +x /tmp/rust_install_creates.sh
 
 ```
 <!-- To comply with the format -->
-cargo install --help
-Install a Rust binary
+>[!NOTE]
+>cargo install --help
+>Install a Rust binary -- system wide
+>
+<!-- markdownlint-disable MD033 -->
+> Usage: cargo install [OPTIONS] [CRATE[@<VER>]]...
+<!-- markdownlint-enable MD033 -->
+> --list                     List all installed packages and their versions
+><!-- keep the format -->
+>folder for Rust binary
+>**ls -la ~/.cargo/bin**
+><!-- keep the format -->
+<!-- keep the format -->
+>[!NOTE]
+>cargo add --help
+>Add dependencies to a **Cargo.toml** manifest file -- project scope
+><!-- keep the format -->
+<!-- keep the format -->
+>[!NOTE]
+>cargo list - same output cargo install --list but with more information
+>List and update installed crates
+>**cargo install cargo-list**
+>
+>used
+>**cargo list**
+><!-- markdownlint-disable MD058 -->
+>|  # | Name        | Pinned | Installed | Available |
+>|---:|-------------|--------|-----------|-----------|
+>|  1 | cargo-cache |        | 0.8.3     |           |
+>|  2 | cargo-list  |        | 0.32.0    |           |
+><!-- markdownlint-enable MD058 -->
+><!-- keep the format -->
+<!-- keep the format -->
+>[!NOTE]
+>cargo tree --help
+>Display a tree visualization of a dependency graph
+>
+>**cargo tree --depth 1**
 
-Usage: cargo install [OPTIONS] [CRATE[@<VER>]]...
+[!NOTE] For later
+cargo tree --depth 1
+cargo-modules https://crates.io/crates/cargo-modules
 
---list                     List all installed packages and their versions
 ##########
 cargo add --help
 Add dependencies to a Cargo.toml manifest file
-
 
 <!-- keep the format -->
 >[!NOTE]
