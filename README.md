@@ -19,10 +19,11 @@
 <!-- keep the format -->
 >[!NOTE]
 >Symbol to mark web external links [![alt text][1]](./README.md)
-<!-- cspell:disable-next-line -->
+<!-- spell-checker: disable  -->
+<!-- keep the format -->
 >[!NOTE]
-<!-- cspell:disable-next-line -->
 > Wrrong word - for test vscode extension cspell [![alt text][1]](https://cspell.org/docs/Configuration/document-settings)
+<!-- spell-checker: enable -->
 <!-- keep the format -->
 ## Useful Marker - Correct view on github [![alt text][1]](https://github.com/MathiasStadler/rust_improve_build_time_debian)
 <!-- keep the format -->
