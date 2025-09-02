@@ -5,11 +5,11 @@
 <!-- keep the format -->
 ## Useful web link
 <!-- keep the format -->
-- markaicode.com - Rust Compiler Performance Improvements in 2025: From 2-Minute to 20-Second Builds [![alt text][1]](https://markaicode.com/rust-compiler-performance-2025/)
+- markaicode.com - Rust Compiler Performance Improvements in 2025:
+- - From 2-Minute to 20-Second Builds [![alt text][1]](https://markaicode.com/rust-compiler-performance-2025/)
 - damnsmallbsd.org - Configuration - The Cargo Book  /.cargo/config.toml [![alt text][1]](https://damnsmallbsd.org/docs/sharedocs/rust/html/cargo/reference/config.html)
-- dotcommagazine.com -  Sccache – Top Ten Important Things You Need To Know [![alt text][1]](https://dotcommagazine.com/2024/04/sccache-top-ten-important-things-you-need-to-know/)
+- dotcommagazine.com - Sccache – Top Ten Important Things You Need To Know [![alt text][1]](https://dotcommagazine.com/2024/04/sccache-top-ten-important-things-you-need-to-know/)
 - earthly.dev - Optimizing Rust Build Speed with sccache [![alt text][1]](https://earthly.dev/blog/rust-sccache/)
-<!-- keep the format -->
 <!-- keep the format -->
 >[!IMPORTANT]
 >For more info follow the project path [![alt text][1]](./project_path.md)

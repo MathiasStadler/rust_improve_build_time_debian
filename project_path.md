@@ -91,12 +91,12 @@ chmod +x /tmp/rust_install_creates.sh
 ```
 <!-- To comply with the format -->
 >[!NOTE]
->cargo install --help
->Install a Rust binary -- system wide
+>cargo install --help  
+>Install a Rust binary -- system wide  
 >
-<!-- markdownlint-disable MD033 -->
+><!-- markdownlint-disable MD033 -->
 > Usage: cargo install [OPTIONS] [CRATE[@<VER>]]...
-<!-- markdownlint-enable MD033 -->
+><!-- markdownlint-enable MD033 -->
 > --list                     List all installed packages and their versions
 ><!-- keep the format -->
 >folder for Rust binary
