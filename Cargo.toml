@@ -5,5 +5,3 @@ edition = "2024"
 
 [dependencies]
 json = "0.12.4"
-rustfmt = "0.10.0"
-serde = "1.0.219"

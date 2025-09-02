@@ -51,6 +51,9 @@ time RUSTC_WRAPPER=sccache cargo build
 rustup show
 # or better
 rustup show |sed -n '/active toolchain/,/^$/p'
+
+cargo tree --depth 1|sed -n '1!p'
+
 ```
 <!-- keep the format -->
 ## Switch between Rust toolchains  [![alt text][1]](https://stackoverflow.com/questions/58226545/how-to-switch-between-rust-toolchains)
@@ -63,7 +66,7 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 ```
 <!-- keep the format -->
 >[!TIP]
->Creates force update / delete / re-installed all crates
+>Rust force update / delete / re-installed all binary
 <!-- To comply with the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 # show was is already installed
@@ -72,10 +75,17 @@ cargo install --list
 cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo uninstall " >/tmp/rust_uninstall_creates.sh
 # create script for re-install 
 cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo install " >/tmp/rust_install_creates.sh
-# create script for re-install with sccache
+# create script for install with sccache
 cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "time RUSTC_WRAPPER=sccache cargo install " >/tmp/rust_install_w_sccache_creates.sh
+# check the scripts before you uses
+# TODO  use variable for cases, shebang
+cat /tmp/rust_uninstall_creates.sh
+cat /tmp/rust_install_creates.sh
+cat /tmp/rust_install_w_sccache_creates.sh
 # make executable
-chmod +x /tmp/rust_uninstall._creates.sh 
+chmod +x /tmp/rust_uninstall_creates.sh
+chmod +x /tmp/rust_install_creates.sh
+chmod +x /tmp/rust_install_w_sccache_creates.sh
 # run the script for uninstalled
 /tmp/rust_uninstall._creates.sh
 # second method for generate script
@@ -85,31 +95,40 @@ cargo install --list
 # re-install - preselect in generated file avoid for new install
 # make executable
 chmod +x /tmp/rust_install_creates.sh
-# run the script for installed
+# run One of the two script for installed
 /tmp/rust_install_creates.sh
-
+/tmp/rust_install_w_sccache_creates.sh
+# check again
+cargo install --list
+# check the filesystem too
+ls -la ~/.cargo/bin
 ```
-<!-- To comply with the format -->
+<!-- keep the format -->
+>[!WARNING]  
+> next point
+> cargo tree
+>echo "├── json v0.12.4"| cut -d ' ' -f 2
+<!-- keep the format -->
 >[!NOTE]
 >cargo install --help  
 >Install a Rust binary -- system wide  
->
 ><!-- markdownlint-disable MD033 -->
 > Usage: cargo install [OPTIONS] [CRATE[@<VER>]]...
 ><!-- markdownlint-enable MD033 -->
-> --list                     List all installed packages and their versions
+>--list  List all installed packages and their versions
 ><!-- keep the format -->
->folder for Rust binary
+>User folder for Rust binary
 >**ls -la ~/.cargo/bin**
 ><!-- keep the format -->
 <!-- keep the format -->
 >[!NOTE]
->cargo add --help
+>cargo add --help  
 >Add dependencies to a **Cargo.toml** manifest file -- project scope
 ><!-- keep the format -->
 <!-- keep the format -->
 >[!NOTE]
->cargo list - same output cargo install --list but with more information
+>cargo list - like cargo install --list  
+>With more information
 >List and update installed crates
 >**cargo install cargo-list**
 >
@@ -124,15 +143,50 @@ chmod +x /tmp/rust_install_creates.sh
 ><!-- keep the format -->
 <!-- keep the format -->
 >[!NOTE]
->cargo tree --help
+>cargo tree --help  
 >Display a tree visualization of a dependency graph
 >
+>Used:
 >**cargo tree --depth 1**
-
-[!NOTE] For later
-cargo tree --depth 1
-cargo-modules https://crates.io/crates/cargo-modules
-
+> "❌" OLD Please fix it  cut -d ' ' -f 2
+>Get plain name dependency without version
+>**cargo tree --depth 1|sed -n '1!p' |awk '{print $2}'**  
+><!-- keep the format -->
+<!-- keep the format -->
+>"❌" The format should reviewed :grin:
+>[!NOTE]
+>cargo remove --help
+>Remove dependencies from a project/**Cargo.toml** manifest file
+>**cargo remove serde**
+>
+>Generate script for remove all installed crates from project
+>"❌" Shebang, return code. set -e. MISSING
+>**cargo tree --depth 1|sed -n '1!p' |awk '{print $2}'|xargs -n 1 echo "cargo remove " >/tmp/rust_remove_dependencies.sh**
+>
+>Generate script for install crates to project
+>>[!IMPORTANT] Before you run the remove script
+>**cargo tree --depth 1|sed -n '1!p' |awk '{print $2}'|xargs -n 1 echo "cargo add " >/tmp/rust_add_dependencies.sh**
+>
+>Make the script executable
+>**chmod +x /tmp/rust_remove_dependencies.sh**
+>**chmod +x /tmp/rust_add_dependencies.sh**
+>Check before you as used
+>**cat /tmp/rust_remove_dependencies.sh**
+>**cat /tmp/rust_add_dependencies.sh**
+><!-- keep the format -->
+<!-- keep the format -->
+>[!NOTE]
+>cargo add --help
+>Add dependencies to a Cargo.toml manifest file
+>Remove dependencies from a project/**Cargo.toml** manifest file - From cargo toml file
+>**cargo remove serde**
+><!-- keep the format -->
+<!-- keep the format -->
+>[!NOTE]
+>cargo-modules [![alt text][1]]([./README.md](https://crates.io/crates/cargo-modules))
+>A cargo plugin for visualizing/analyzing a crate's internal structure
+><!-- keep the format -->
+<!-- keep the format -->
 ##########
 cargo add --help
 Add dependencies to a Cargo.toml manifest file
