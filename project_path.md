@@ -41,6 +41,7 @@ cargo install cargo-cache
 ```bash <!-- markdownlint-disable-line code-block-style -->
 cargo cache
 ```
+<!-- keep the format -->
 time RUSTC_WRAPPER=sccache cargo build
 
 <!-- keep the format -->

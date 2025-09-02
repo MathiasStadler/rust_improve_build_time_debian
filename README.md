@@ -1,4 +1,16 @@
-# Rust main startup
+# rust improve build time debian
+
+- improve build speed / time
+- Saving resources / time through repeated postcompilation
+<!-- keep the format -->
+## useful web link
+<!-- keep the format -->
+- markaicode.com - Rust Compiler Performance Improvements in 2025: From 2-Minute to 20-Second Builds [![alt text][1]](https://markaicode.com/rust-compiler-performance-2025/)
+- Configuration - The Cargo Book  /.cargo/config.toml [![alt text][1]](https://damnsmallbsd.org/docs/sharedocs/rust/html/cargo/reference/config.html)
+- Sccache – Top Ten Important Things You Need To Know [![alt text][1]](https://dotcommagazine.com/2024/04/sccache-top-ten-important-things-you-need-to-know/)
+- Optimizing Rust Build Speed with sccache [![alt text][1]](https://earthly.dev/blog/rust-sccache/)
+<!-- keep the format -->
+## Rust main startup
 <!-- keep the format -->
 >[!NOTE]
 >Symbol to mark web external links [![alt text][1]](./README.md)
@@ -6,9 +18,10 @@
 > [!NOTE]
 <!-- cspell:disable-next-line -->
 >[!NOTE]
+<!-- cspell:disable-next-line -->
 > Wrrong word - for test vscode extension cspell [![alt text][1]](https://cspell.org/docs/Configuration/document-settings)
 <!-- keep the format -->
-## Useful Marker
+## Useful Marker - Correct view on github [![alt text][1]](https://github.com/MathiasStadler/rust_improve_build_time_debian)
 <!-- keep the format -->
 - Just for test [![alt text][1]](https://github.com/orgs/community/discussions/16925)
 <!-- -->
