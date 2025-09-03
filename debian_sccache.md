@@ -159,9 +159,9 @@ sccache --show-stats
 ## Create local config file [![alt text][1]](https://deepwiki.com/mozilla/sccache/2.1-configuration)
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
-mkdir ~/.config/sccache
+mkdir -p  ~/.config/sccache
 touch ~/.config/sccache/config
-cat > .cargo/config.toml << 'EOF'
+cat > ~/.config/sccache/config << 'EOF'
 # Server configuration options
 server_startup_timeout_ms = 10000
 
@@ -190,12 +190,6 @@ EOF
 <!-- keep the format -->
 <!-- keep the format -->
 <!-- markdownlint-disable -->
-| Option                      | Description                                           | Default |
-| --------------------------- | --------------------------------------------------    | ------- |
-| use_preprocessor_cache_mode |  Enable/disable preprocessor cache mode               |  true   |
-| file_stat_matches           |  Compare header files by size/time rather than content| false   |
-
-
 | Option                      |Description                                            | Default |   
 | ----------------------------|-------------------------------------------------------| ------- |
 | use_preprocessor_cache_mode | Enable/disable preprocessor cache mode                | true    |

@@ -1,0 +1,12 @@
+SCCACHE_ERROR_LOG=/tmp/sccache_log.txt SCCACHE_LOG=debug sccache cargo build
+[2025-09-03T19:05:08Z DEBUG sccache::config] Attempting to read config file at 
+"/home/trapapa/.config/sccache/config"
+[2025-09-03T19:05:09Z DEBUG sccache::commands] Server sent UnsupportedCompiler:
+ "error: unexpected argument \'-E\' found\n\nUsage: cargo [+toolchain] [OPTIONS] [COMMAND]\n       
+ cargo [+toolchain] [OPTIONS] -Zscript <MANIFEST_RS> [ARGS]...\n\nFor more information, try \'--help\'.\n"
+sccache: error: failed to execute compile
+sccache: caused by: Compiler not supported: "error: unexpected argument \'-E\' found\n\nUsage:
+ cargo [+toolchain] [OPTIONS] [COMMAND]\n       cargo [+toolchain] [OPTIONS] -Zscript <MANIFEST_RS> [ARGS]...\n\n
+ For more information, try \'--help\'.\n"
+
+  "error: unexpected argument '-E' found Usage: cargo
