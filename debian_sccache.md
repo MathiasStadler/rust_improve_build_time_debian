@@ -196,7 +196,7 @@ EOF
 | file_stat_matches           |  Compare header files by size/time rather than content| false   |
 
 
-| Option                      |Description                                            | Default |                                                      |      |
+| Option                      |Description                                            | Default |   
 | ----------------------------|-------------------------------------------------------| ------- |
 | use_preprocessor_cache_mode | Enable/disable preprocessor cache mode                | true    |
 | file_stat_matches           | Compare header files by size/time rather than content | false   |
