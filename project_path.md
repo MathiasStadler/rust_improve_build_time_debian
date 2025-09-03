@@ -75,11 +75,11 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 ># show was is already installed
 >cargo install --list
 ># create script for uninstall 
->cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo uninstall " | tee /tmp/rust_uninstall_creates.sh
+>cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo uninstall " | tee /tmp/rust_uninstall_binary.sh
 ># create script for re-install 
->cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo install " | tee /tmp/rust_install_creates.sh
+>cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo install " | tee /tmp/rust_install_binary.sh
 ># create script for install with sccache
->cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "time RUSTC_WRAPPER=sccache cargo install " | tee /tmp/rust_install_w_sccache_creates.sh
+>cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "time RUSTC_WRAPPER=sccache cargo install " | tee /tmp/rust_install_w_sccache_binary.sh
 >```
 ><!-- keep the format -->
 >- Check the scripts before you uses
@@ -126,11 +126,46 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 >[!TIP]
 >Rust force update / delete / re-installed all creates
 ><!-- keep the format -->
->- Show which creates are already installed in current project
+>- Shows which creates are already installed in the current project
 ><!-- keep the format -->
 >```bash <!-- markdownlint-disable-line code-block-style -->
 >cargo tree --depth 1|sed -n '1!p' |awk '{print $2}'
+># with version number
+>cargo tree --depth 1|sed -n '1!p' |awk '{print $2 "= \"" $3"\""}'
 >```
+><!-- keep the format -->
+>- Shows which crates are listed in the Cargo.toml - The same list
+><!-- keep the format -->
+>```bash <!-- markdownlint-disable-line code-block-style -->
+>cat Cargo.toml|sed -n '/dependencies/,/^$/p'
+>```
+><!-- keep the format -->
+>:bangbang: Improve here tutorial
+><!-- keep the format -->
+>- Create script for install , uninstall and update all creates
+><!-- keep the format -->
+>```bash <!-- markdownlint-disable-line code-block-style -->
+>cargo tree --depth 1|sed -n '1!p' |awk '{print $2}'|xargs -n1 echo "cargo remove " | tee /tmp/rust_remove_creates.sh
+>```
+><!-- keep the format -->
+>- Make scripts  executable for uninstall all creates
+><!-- keep the format -->
+>```bash <!-- markdownlint-disable-line code-block-style -->
+>chmod +x  /tmp/rust_remove_creates.sh
+>```
+><!-- keep the format -->
+>- Run the script
+><!-- keep the format -->
+>```bash <!-- markdownlint-disable-line code-block-style -->
+>/tmp/rust_remove_creates.sh
+>```
+><!-- keep the format -->
+>- install all crates
+<!-- keep the format -->
+<!-- keep the format -->
+<!-- keep the format -->
+<!-- keep the format -->
+<!-- keep the format -->
 <!-- keep the format -->
 >
 <!-- keep the format -->
@@ -154,6 +189,8 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 > next point
 > cargo tree
 >echo "├── json v0.12.4"| cut -d ' ' -f 2
+
+.cargo/registry/src
 <!-- keep the format -->
 >[!NOTE]
 >cargo install --help  
@@ -171,7 +208,6 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 >cargo add --help  
 >Add dependencies to a **Cargo.toml** manifest file -- project scope
 ><!-- keep the format -->
-
 >[!NOTE]
 >cargo tree --help  
 >Display a tree visualization of a dependency graph
@@ -220,6 +256,10 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 ##########
 cargo add --help
 Add dependencies to a Cargo.toml manifest file
+<!-- keep the format -->
+<!-- keep the format -->
+<!-- keep the format -->
+<!-- keep the format -->
 
 <!-- keep the format -->
 >[!NOTE]
