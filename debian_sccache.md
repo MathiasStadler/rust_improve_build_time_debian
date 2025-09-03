@@ -189,11 +189,13 @@ EOF
 | Cell 1, Row 2 | Cell 1, Row 2 |
 <!-- keep the format -->
 <!-- keep the format -->
-| Option        | Description      | Description      |
-| ------------- | ------------- | ------------------- |
-| Cell 1, Row 1 | Cell 2, Row 1 |  Cell 2, Row 1      |
-| Cell 1, Row 2 | Cell 1, Row 2 |  Cell 2, Row 1      |
 <!-- markdownlint-disable -->
+| Option                      | Description                                           | Default |
+| --------------------------- | --------------------------------------------------    | ------- |
+| use_preprocessor_cache_mode |  Enable/disable preprocessor cache mode               |  true   |
+| file_stat_matches           |  Compare header files by size/time rather than content| false   |
+
+
 | Option                      |Description                                            | Default |                                                      |      |
 | ----------------------------|-------------------------------------------------------| ------- |
 | use_preprocessor_cache_mode | Enable/disable preprocessor cache mode                | true    |
