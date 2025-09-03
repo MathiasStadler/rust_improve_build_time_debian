@@ -190,14 +190,14 @@ EOF
 
 <!-- keep the format -->
 <!-- markdownlint-disable -->
-|Option |Description |Default|
-|----------------------------|-----------------------------------------------------<|------|
-|use_preprocessor_cache_mode | Enable/disable preprocessor cache mode               |true  |
-|file_stat_matches           |Compare header files by size/time rather than content | false|
-|use_ctime_for_stat          |Use ctime to check file changes                       |true  |
-|ignore_time_macros          |Ignore time macros (_DATE_,_TIME_,_TIMESTAMP__)       |false |
-|skip_system_headers         |Don't cache system headers, only add them to the hash |false |
-|hash_working_directory      |Include working directory in the hash                 |true  |
+|Option                      |Description                                           |Default|                                                      |      |
+|----------------------------|------------------------------------------------------|-------|
+|use_preprocessor_cache_mode |Enable/disable preprocessor cache mode                |true   |
+|file_stat_matches           |Compare header files by size/time rather than content |false  |
+|use_ctime_for_stat          |Use ctime to check file changes                       |true   |
+|ignore_time_macros          |Ignore time macros (_DATE_,_TIME_,_TIMESTAMP__)       |false  |
+|skip_system_headers         |Don't cache system headers, only add them to the hash |false  |
+|hash_working_directory      |Include working directory in the hash                 |true   |
 <!-- markdownlint-enable -->
 ## Usage with RUST based projects
 <!-- keep the format -->
