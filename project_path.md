@@ -67,7 +67,7 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 <!-- keep the format -->
 >[!TIP]
 >Rust force update / delete / re-installed all binary
->>!-- keep the format -->
+><!-- keep the format -->
 >- create scripts
 ><!-- To comply with the format -->
 >```bash <!-- markdownlint-disable-line code-block-style -->
@@ -98,17 +98,10 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 ><chmod +x /tmp/rust_install_w_sccache_creates.sh
 >```
 ><!-- keep the format -->
->- Run the script for uninstalled
+>- Generate first all script
 ><!-- keep the format -->
 >```bash <!-- markdownlint-disable-line code-block-style -->
->/tmp/rust_uninstall._creates.sh
-># second method for generate script
-># cargo install --list  |cut -d " " -f1 | grep -v "^$" |xargs -n 1 echo "cargo uninstall "
-># Show which creates are installed now
->cargo install --list
-># re-install - preselect in generated file avoid for new install
-># make executable
->chmod +x /tmp/rust_install_creates.sh
+>
 ># run One of the two script for installed
 >/tmp/rust_install_creates.sh
 >/tmp/rust_install_w_sccache_creates.sh
@@ -181,10 +174,10 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 >>[!IMPORTANT] Before you run the remove script
 >**cargo tree --depth 1|sed -n '1!p' |awk '{print $2}'|xargs -n 1 echo "cargo add " >/tmp/rust_add_dependencies.sh**
 >
->Make the script executable
+>- Make the script executable
 >**chmod +x /tmp/rust_remove_dependencies.sh**
 >**chmod +x /tmp/rust_add_dependencies.sh**
->Check before you as used
+>- Check before you as used
 >**cat /tmp/rust_remove_dependencies.sh**
 >**cat /tmp/rust_add_dependencies.sh**
 ><!-- keep the format -->
@@ -212,3 +205,19 @@ Add dependencies to a Cargo.toml manifest file
 <!-- mkdir -p img && curl --create-dirs --output-dir img -O  "https://raw.githubusercontent.com/MathiasStadler/link_symbol_svg/refs/heads/main/link_symbol.svg"-->
 <!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
 [1]: ./img/link_symbol.svg
+
+## garbage garage
+<!-- keep the format -->
+>/tmp/rust_uninstall._creates.sh
+><!-- keep the format -->
+>- second method for generate script
+><!-- keep the format -->
+>- cargo install --list  |cut -d " " -f1 | grep -v "^$" |xargs -n 1 echo "cargo uninstall "
+><!-- keep the format -->
+>- Show which creates are installed now
+>cargo install --list
+>- re-install - preselect in generated file avoid for new install
+>- make executable
+>chmod +x /tmp/rust_install_creates.sh
+><!-- keep the format -->
+<!-- keep the format -->
