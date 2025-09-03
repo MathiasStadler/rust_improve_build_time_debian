@@ -183,6 +183,11 @@ hash_working_directory = true
 EOF
 ```
 
+| Column 1      | Column 2      |
+| ------------- | ------------- |
+| Cell 1, Row 1 | Cell 2, Row 1 |
+| Cell 1, Row 2 | Cell 1, Row 2 |
+
 Option Description Default
 use_preprocessor_cache_mode Enable/disable preprocessor cache mode                true
 file_stat_matches           Compare header files by size/time rather than content false
