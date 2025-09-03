@@ -1,4 +1,4 @@
-# sccache on debian
+# debian sccache
 <!-- keep the format -->
 - [Sccache](#Sccache - Shared Compilation Cache)
 - [Os](os)
@@ -7,7 +7,9 @@
 
 ## Sccache - Shared Compilation Cache [![alt text][1]](https://github.com/mozilla/sccache/tree/main)
 <!-- keep the format -->
-- Sccache - Shared Compilation Cache
+<!-- spell-checker: disable  -->
+- Sccache - **S**hared **C**ompilation **Cache**
+<!-- spell-checker: enable-->
 - sccache is a ccache [![alt text][1]](https://ccache.dev) -like) compiler caching tool.
 - It is used as a compiler wrapper and avoids compilation when possible,
 - storing cached results either on local disk
