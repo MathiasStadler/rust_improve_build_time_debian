@@ -182,23 +182,23 @@ hash_working_directory = true
 
 EOF
 ```
-
+<!-- keep the format -->
 | Column 1      | Column 2      |
 | ------------- | ------------- |
 | Cell 1, Row 1 | Cell 2, Row 1 |
 | Cell 1, Row 2 | Cell 1, Row 2 |
-
 <!-- keep the format -->
 <!-- markdownlint-disable -->
-|Option                      |Description                                           |Default|                                                      |      |
-|----------------------------|------------------------------------------------------|-------|
-|use_preprocessor_cache_mode |Enable/disable preprocessor cache mode                |true   |
-|file_stat_matches           |Compare header files by size/time rather than content |false  |
-|use_ctime_for_stat          |Use ctime to check file changes                       |true   |
-|ignore_time_macros          |Ignore time macros (_DATE_,_TIME_,_TIMESTAMP__)       |false  |
-|skip_system_headers         |Don't cache system headers, only add them to the hash |false  |
-|hash_working_directory      |Include working directory in the hash                 |true   |
+| Option                      |Description                                            | Default |                                                      |      |
+| ----------------------------|-------------------------------------------------------| ------- |
+| use_preprocessor_cache_mode | Enable/disable preprocessor cache mode                | true    |
+| file_stat_matches           | Compare header files by size/time rather than content | false   |
+| use_ctime_for_stat          | Use ctime to check file changes                       | true    |
+| ignore_time_macros          | Ignore time macros (_DATE_,_TIME_,_TIMESTAMP__)       | false   |
+| skip_system_headers         | Don't cache system headers, only add them to the hash | false   |
+| hash_working_directory      | Include working directory in the hash                 | true    |
 <!-- markdownlint-enable -->
+<!-- keep the format -->
 ## Usage with RUST based projects
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
