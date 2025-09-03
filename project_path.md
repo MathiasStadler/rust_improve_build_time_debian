@@ -52,6 +52,7 @@ rustup show
 # or better
 rustup show |sed -n '/active toolchain/,/^$/p'
 
+:bangbang: Please check and remove
 cargo tree --depth 1|sed -n '1!p'
 
 ```
@@ -74,15 +75,15 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 ># show was is already installed
 >cargo install --list
 ># create script for uninstall 
->cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo uninstall " >/tmp/rust_uninstall_creates.sh
+>cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo uninstall " | tee /tmp/rust_uninstall_creates.sh
 ># create script for re-install 
->cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo install " >/tmp/rust_install_creates.sh
+>cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "cargo install " | tee /tmp/rust_install_creates.sh
 ># create script for install with sccache
->cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "time RUSTC_WRAPPER=sccache cargo install " >/tmp/rust_install_w_sccache_creates.sh
+>cargo install --list |grep "^\s\s\s\s*" |xargs -n 1 echo "time RUSTC_WRAPPER=sccache cargo install " | tee /tmp/rust_install_w_sccache_creates.sh
 >```
 ><!-- keep the format -->
->- check the scripts before you uses
->- TODO  use variable for cases, shebang
+>- Check the scripts before you uses
+>- :bangbang: TODO  use variable for cases, shebang
 ><!-- keep the format -->
 >```bash <!-- markdownlint-disable-line code-block-style -->
 >cat /tmp/rust_uninstall_creates.sh
@@ -90,7 +91,7 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 >cat /tmp/rust_install_w_sccache_creates.sh
 >```
 ><!-- keep the format -->
->- make scripts  executable
+>- Make scripts  executable
 ><!-- keep the format -->
 >```bash <!-- markdownlint-disable-line code-block-style -->
 >chmod +x /tmp/rust_uninstall_creates.sh
@@ -101,15 +102,53 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 >- Generate first all script
 ><!-- keep the format -->
 >```bash <!-- markdownlint-disable-line code-block-style -->
->
-># run One of the two script for installed
+>```
+><!-- keep the format -->
+>- Run One of the two script for installing
+><!-- keep the format -->
+>```bash <!-- markdownlint-disable-line code-block-style -->
 >/tmp/rust_install_creates.sh
 >/tmp/rust_install_w_sccache_creates.sh
-># check again
+>```
+><!-- keep the format -->
+>- check again
+><!-- keep the format -->
+>```bash <!-- markdownlint-disable-line code-block-style -->
 >cargo install --list
-># check the filesystem too
+>```
+><!-- keep the format -->
+>- check again of filesystem level  too
+><!-- keep the format -->
+>```bash <!-- markdownlint-disable-line code-block-style -->
 >ls -la ~/.cargo/bin
 >```
+<!-- keep the format -->
+>[!TIP]
+>Rust force update / delete / re-installed all creates
+><!-- keep the format -->
+>- Show which creates are already installed in current project
+><!-- keep the format -->
+>```bash <!-- markdownlint-disable-line code-block-style -->
+>cargo tree --depth 1|sed -n '1!p' |awk '{print $2}'
+>```
+<!-- keep the format -->
+>
+<!-- keep the format -->
+>[!NOTE]
+>cargo list - like cargo install --list  
+>With more information
+>List and update installed crates
+>**cargo install cargo-list**
+>
+>used
+>**cargo list**
+><!-- markdownlint-disable MD058 -->
+>|  # | Name        | Pinned | Installed | Available |
+>|---:|-------------|--------|-----------|-----------|
+>|  1 | cargo-cache |        | 0.8.3     |           |
+>|  2 | cargo-list  |        | 0.32.0    |           |
+><!-- markdownlint-enable MD058 -->
+><!-- keep the format -->
 <!-- keep the format -->
 >[!WARNING]  
 > next point
@@ -132,23 +171,7 @@ rustup override set 1.85.0-x86_64-unknown-linux-gnu
 >cargo add --help  
 >Add dependencies to a **Cargo.toml** manifest file -- project scope
 ><!-- keep the format -->
-<!-- keep the format -->
->[!NOTE]
->cargo list - like cargo install --list  
->With more information
->List and update installed crates
->**cargo install cargo-list**
->
->used
->**cargo list**
-><!-- markdownlint-disable MD058 -->
->|  # | Name        | Pinned | Installed | Available |
->|---:|-------------|--------|-----------|-----------|
->|  1 | cargo-cache |        | 0.8.3     |           |
->|  2 | cargo-list  |        | 0.32.0    |           |
-><!-- markdownlint-enable MD058 -->
-><!-- keep the format -->
-<!-- keep the format -->
+
 >[!NOTE]
 >cargo tree --help  
 >Display a tree visualization of a dependency graph
