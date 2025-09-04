@@ -156,6 +156,11 @@ ps -ef|grep sccache | grep -v grep
 sccache --show-stats
 ```
 
+## rust project compile with sccache [![alt text][1]](https://earthly.dev/blog/rust-sccache/)
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+```
+<!-- keep the format -->
 ## Create local config file [![alt text][1]](https://deepwiki.com/mozilla/sccache/2.1-configuration)
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
@@ -222,6 +227,13 @@ SCCACHE_ERROR_LOG=/tmp/sccache_log.txt SCCACHE_LOG=debug sccache cargo build
 
 - build
 
+## Usage
+<!-- keep the format -->
+```bash <!-- markdownlint-disable-line code-block-style -->
+export RUSTC_WRAPPER=sccache
+cargo build
+```
+<!-- keep the format -->
 <!-- keep the format -->
 >[!NOTE]
 >Symbol to mark web external links [![alt text][1]](./README.md)

@@ -2,9 +2,11 @@
     "cSpell.words": [
         "bangbang",
         "ccache",
+        "clippy",
         "codegen",
         "damnsmallbsd",
         "dotcommagazine",
+        "lpalmieri",
         "markaicode",
         "NOCOLOR",
         "postcompilation",
@@ -23,6 +25,14 @@
         "XXX",
         "[ ]",
         "[x]"
-    ]
+    ],
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:rust_improve_build_time_debian}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    }
 
 }
