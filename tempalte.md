@@ -1,6 +1,6 @@
 # title
 <!-- keep the format -->
-##
+## toc
 <!-- keep the format -->
 - [toc to 0](## 0)
 - [toc to a](## a)
@@ -12,6 +12,9 @@
 ```
 <!-- keep the format -->
 ## 0
+
+[toc](#toc)
+
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 ```
@@ -31,7 +34,7 @@
 ```bash <!-- markdownlint-disable-line code-block-style -->
 ```
 <!-- keep the format -->
-## d
+## d [toc](#toc)
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 ```
