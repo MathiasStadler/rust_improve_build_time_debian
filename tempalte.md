@@ -2,11 +2,11 @@
 <!-- keep the format -->
 ##
 <!-- keep the format -->
-- [toc to 0](0)
-- [toc to a](a)
-- [toc to b](b)
-- [toc to c](c)
-- [toc to d](d)
+- [toc to 0](## 0)
+- [toc to a](## a)
+- [toc to b](## b)
+- [toc to c](## c)
+- [toc to d](## d)
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 ```
