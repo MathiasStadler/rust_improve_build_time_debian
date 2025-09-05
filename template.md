@@ -1,22 +1,30 @@
-# title
+# Title
 <!-- keep the format -->
-##
+## Toc
 <!-- keep the format -->
-[toc to 0](0)
-[toc to a](a)
-[toc to b](b)
-[toc to c](c)
-[toc to d](d)
+* [toc to 0](0)
+<!-- keep the format -->
+* [toc to a](a)
+<!-- keep the format -->
+* [toc to b](b)
+<!-- keep the format -->
+* [toc to c](c)
+<!-- keep the format -->
+* [toc to d](d)
+<!-- keep the format -->
+* [Installation](Installation)
+<!-- keep the format -->
+
+```bash <!-- markdownlint-disable-line code-block-style -->
+```
+<!-- keep the format -->
+## Installation [toc](toc)
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 ```
 <!-- keep the format -->
-## 0
-<!-- keep the format -->
-```bash <!-- markdownlint-disable-line code-block-style -->
-```
-<!-- keep the format -->
-## a
+a
+****
 <!-- keep the format -->
 ```bash <!-- markdownlint-disable-line code-block-style -->
 ```
